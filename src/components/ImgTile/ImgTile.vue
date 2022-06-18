@@ -6,34 +6,24 @@
 
 <script>
 import ImgCard from "../ImgCard/ImgCard.vue";
-import dataList1 from "../../hook/dataList";
+import dataList from "../../hook/dataList";
 
 export default {
   name: "ImgTile",
   components: {
     ImgCard,
   },
-
   setup() {
-    
-  },
-
-  data() {
     return {
-      dataList:[]
+      dataList: dataList(),
     };
   },
-
-  mounted() {
-    this.dataList = dataList1
-  },
-
-  methods: {},
 };
 </script>
 
 <style scoped>
 .imgTile {
   display: flex;
+  flex-wrap: wrap;
 }
 </style>
